@@ -4,7 +4,7 @@ from typing import List
 HYPHEN_E_DOT = "-e."
 def get_requirements(file_path: str) -> List[str]:
     '''
-    This function will return the list of requirements.
+    This function will return list of requirements.
     '''
 
     requiremnets = []
@@ -22,8 +22,6 @@ setup(
     author="Mohammad Talib Daryabi",
     author_email="talibdaryabi@gmail.com",
     packages= find_packages(),
-    install_requires = get_requirements('requirements.txt'), 
-    
+    install_requires = get_requirements('requirements.txt')
 )
-
 

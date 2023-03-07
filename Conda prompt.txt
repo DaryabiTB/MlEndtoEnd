@@ -1,0 +1,40 @@
+Conda prompt
+cd H:/d/c/
+
+code. 
+
+
+VScode terminal: 
+
+conda create -p venv python==3.8 -y
+conda activate venv 
+
+--- Create a file README.md in vs-code and save it. 
+
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:DaryabiTB/MlEndtoEnd.git
+
+---Before doing this command, you have to 
+git config --global user.name "DaryabiTB"
+git config --global user.email "talibdaryabi@gmail.com"
+
+----- now push
+git push -u origin main
+----------
+
+--- Add .gitignore
+
+
+
+
+
+---- After you changes and everything 
+git add . 
+git commint -m "your message"
+git push -u origin main
+
+------------------------------------------
+
