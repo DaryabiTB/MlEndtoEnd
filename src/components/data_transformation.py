@@ -33,7 +33,6 @@ class DataTransformation:
             column_transformor = self.get_ColumnTransformer()
             
             target_col = "math_score"
-            numerical_cols = ['writing_score', 'reading_score']
 
             X_train = train_df.drop(columns=[target_col], axis=1)
             X_test = train_df[target_col]
@@ -45,8 +44,8 @@ class DataTransformation:
             X_train_transformed =  column_transformor.fit_transform(X_train)
             Y_train_transformed  =  column_transformor.transform(Y_train)
 
-            X_train_Xtest_transformed_combined = np.c_[ X_train_transformed , np.array(X_test) ]
-            Y_train_Ytest_transformed_combined = np.c_[ Y_train_transformed , np.array(Y_test)]
+            X_train_Xtest_transformed_combined_array = np.c_[ X_train_transformed , np.array(X_test) ]
+            Y_train_Ytest_transformed_combined_array = np.c_[ Y_train_transformed , np.array(Y_test)]
             
 
             utils.save_object(
@@ -57,8 +56,8 @@ class DataTransformation:
             logging.info("saved the Column_transformer object")
             
             return(
-                X_train_Xtest_transformed_combined, 
-                Y_train_Ytest_transformed_combined, 
+                X_train_Xtest_transformed_combined_array, 
+                Y_train_Ytest_transformed_combined_array, 
                 self.data_transformation_config.ColumnTransformer_obj_file_PATH
             )
             
