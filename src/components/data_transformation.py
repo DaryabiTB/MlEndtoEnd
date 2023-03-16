@@ -32,7 +32,7 @@ class DataTransformation:
             logging.info("obtaining Column_Transformer object")
             column_transformor = self.get_ColumnTransformer()
             
-            target_col = "math_score"
+            target_col = "math_score" 
 
             X_train = train_df.drop(columns=[target_col], axis=1)
             X_test = train_df[target_col]
